@@ -1,4 +1,4 @@
-import { cart } from '../../data/cart-oop.js';
+import { cart } from '../../data/cart-class.js';
 import { products, getProduct } from '../../data/products.js';
 import { formatCurrency } from '../utils/money.js'
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
@@ -35,7 +35,7 @@ export function renderOrderSummary() {
               ${matchingProduct.name}
             </div>
             <div class="product-price">
-              $${formatCurrency(matchingProduct.priceCents)}
+              $${matchingProduct.getPrice(formatCurrency)}
             </div>
             <div class="product-quantity">
               <span>
