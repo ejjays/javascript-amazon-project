@@ -101,6 +101,3 @@ const bussinesCart = new Cart();
 bussinesCart.localStorageKey = 'cart-bussines';
 
 bussinesCart.loadFromStorage();
-
-console.log(cart);
-console.log(bussinesCart);
