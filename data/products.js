@@ -43,6 +43,17 @@ class Clothing extends Product {
   }
 }
 
+/*
+  const date = new Date();
+  console.log(date);
+  console.log(date.toLocaleString());
+*/
+
+function logThis() {
+  console.log(this);
+}
+console.log(logThis.call('Hello World, Success!'));
+
 export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -706,7 +717,6 @@ export const products = [
   if (productDetails.type === 'clothing') {
     return new Clothing(productDetails);
   } 
-  
   return new Product(productDetails);
 });
 
@@ -721,3 +731,4 @@ export function getProduct(productId) {
     
     return matchingProduct;
 }
+
